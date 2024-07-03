@@ -1,0 +1,7 @@
+extended-vlan-tagging-operation V638-PPPoE 
+ downstream-mode enable
+ single-tagged-frame 1 
+  filter inner vid {{ vlan_id }} cos any tpid 0x8100 
+  treat remove single
+  treat inner vid {{ vlan_id }} cos copy-inner tpid 0x8100 
+ apply 

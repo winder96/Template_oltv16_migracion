@@ -1,0 +1,6 @@
+extended-vlan-tagging-operation {{ type_service }}
+ downstream-mode enable
+ untagged-frame 1 
+  treat inner vid {{ vlan_id }} cos 0 tpid 0x8100 
+ apply 
+
